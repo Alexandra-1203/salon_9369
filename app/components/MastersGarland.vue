@@ -103,9 +103,9 @@
 import { ref, computed } from 'vue'
 
 const masters = ref([
-  { id: 1, name: 'Наталья', role: 'Руководитель студии, мастер маникюра', photo: '/images/natasha.png', bookingUrl: 'https://n1163753.yclients.com/' },
-  { id: 2, name: 'Анна', role: 'Мастер по ресницам', photo: '/images/natasha.png', bookingUrl: 'https://n1163753.yclients.com/' },
-  { id: 3, name: 'Мария', role: 'Бровист', photo: '/images/natasha.png', bookingUrl: 'https://n1163753.yclients.com/' }
+  { id: 1, name: 'Наталья', role: 'Руководитель студии, мастер маникюра', photo: '/images/we.webp', bookingUrl: 'https://n1163753.yclients.com/' },
+  { id: 2, name: 'Анна', role: 'Мастер по ресницам', photo: '/images/we.webp', bookingUrl: 'https://n1163753.yclients.com/' },
+  { id: 3, name: 'Мария', role: 'Бровист', photo: '/images/we.webp', bookingUrl: 'https://n1163753.yclients.com/' }
 ])
 
 const currentSlide = ref(0)
