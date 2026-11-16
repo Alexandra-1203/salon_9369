@@ -1,15 +1,28 @@
 <template>
-  <section class="film-section" :class="themeClass">
+  <section
+    class="film-section"
+    :class="themeClass"
+  >
     <div class="text-center mb-12 px-6 lg:px-12">
-      <Reveal tag="h2" class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 text-gray-900">
+      <Reveal
+        tag="h2"
+        class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 text-gray-900"
+      >
         {{ title }}
       </Reveal>
-      <Reveal tag="p" :delay="150" class="text-gray-600 text-lg max-w-2xl mx-auto">
+      <Reveal
+        tag="p"
+        :delay="150"
+        class="text-gray-600 text-lg max-w-2xl mx-auto"
+      >
         {{ subtitle }}
       </Reveal>
     </div>
 
-    <Reveal :delay="250" y="40">
+    <Reveal
+      :delay="250"
+      y="40"
+    >
       <div
         ref="viewportRef"
         class="film"
@@ -35,15 +48,19 @@
               v-if="item.type === 'video'"
               :src="item.src"
               class="film__photo"
-              autoplay muted loop playsinline preload="metadata"
-            ></video>
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            />
             <img
               v-else
               :src="item.src || item"
               :alt="title"
               class="film__photo"
               draggable="false"
-            />
+            >
           </div>
         </div>
       </div>
@@ -59,24 +76,24 @@ const props = defineProps({
   subtitle: { type: String, default: '' },
   slides: { type: Array, required: true },
   theme: { type: String, default: 'pink' },
-  duration: { type: Number, default: 40 },
+  duration: { type: Number, default: 40 }
 })
 
 const themeClass = computed(() => `film-section--${props.theme}`)
 const loopSlides = computed(() => [...props.slides, ...props.slides])
 
 const trackRef = ref(null)
-const trackWidth = ref(0)    
-const position = ref(0)   
+const trackWidth = ref(0)
+const position = ref(0)
 const dragging = ref(false)
 
 let animationId = null
 let lastTime = 0
-let velocity = 0        
+let velocity = 0
 
 const getAutoSpeed = () => {
   if (!props.duration || !trackWidth.value) return 0
-  return trackWidth.value / props.duration 
+  return trackWidth.value / props.duration
 }
 
 const tick = (time) => {
@@ -135,7 +152,6 @@ const onPointerUp = () => {
   dragging.value = false
   velocity = Math.max(-2000, Math.min(2000, velocity))
 }
-
 
 const measure = () => {
   if (trackRef.value) {

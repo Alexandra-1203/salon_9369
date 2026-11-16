@@ -1,13 +1,13 @@
 <template>
   <section class="film-section">
     <div class="text-center mb-12">
-        <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 text-gray-900">
-          Наш интерьер
-        </h2>
-        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-          Уютная студия, в которой хочется остаться подольше
-        </p>
-      </div>
+      <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 text-gray-900">
+        Наш интерьер
+      </h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+        Уютная студия, в которой хочется остаться подольше
+      </p>
+    </div>
     <div
       ref="viewportRef"
       class="film"
@@ -33,7 +33,12 @@
           class="film__frame"
           :class="{ 'film__frame--active': i === currentSlide }"
         >
-          <img :src="img" alt="Кадр" class="film__photo" draggable="false" />
+          <img
+            :src="img"
+            alt="Кадр"
+            class="film__photo"
+            draggable="false"
+          >
         </div>
       </div>
     </div>
@@ -49,7 +54,7 @@ const slides = ref([
   '/images/interior.jpg',
   '/images/interior2.jpg',
   '/images/interior5.jpg',
-  '/images/interior6.jpg',
+  '/images/interior6.jpg'
 ])
 
 const currentSlide = ref(0)
@@ -69,9 +74,9 @@ const offset = computed(() => {
 })
 
 const isDragging = ref(false)
-const dragOffset = ref(0)      
-const startX = ref(0)           
-const startOffset = ref(0)     
+const dragOffset = ref(0)
+const startX = ref(0)
+const startOffset = ref(0)
 
 const onPointerDown = (e) => {
   isDragging.value = true

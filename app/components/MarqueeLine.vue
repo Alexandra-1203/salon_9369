@@ -3,7 +3,10 @@
     <div class="marquee">
       <div class="marquee__track">
         <span class="marquee__text text-green-500">Ты красотка ✦ Ты красотка ✦ Ты красотка ✦ Ты красотка ✦ Ты красотка ✦&nbsp;</span>
-        <span class="marquee__text text-green-500" aria-hidden="true">Ты красотка ✦ Ты красотка ✦ Ты красотка ✦ Ты красотка ✦ Ты красотка ✦&nbsp;</span>
+        <span
+          class="marquee__text text-green-500"
+          aria-hidden="true"
+        >Ты красотка ✦ Ты красотка ✦ Ты красотка ✦ Ты красотка ✦ Ты красотка ✦&nbsp;</span>
       </div>
     </div>
   </section>

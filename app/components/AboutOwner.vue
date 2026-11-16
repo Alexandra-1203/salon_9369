@@ -1,13 +1,15 @@
 <template>
-  <section class="relative w-full pt-0 overflow-hidden" id="about">
+  <section
+    id="about"
+    class="relative w-full pt-0 overflow-hidden"
+  >
     <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
       <Reveal class="flex items-center justify-start">
         <img
           src="/images/natasha.png"
           alt="Наш салон"
           class="max-w-full h-auto max-h-[800px] object-contain drop-shadow-2xl w-full lg:w-auto"
-        />
+        >
       </Reveal>
 
       <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
@@ -20,11 +22,19 @@
             </Reveal>
 
             <div class="border-l-4 border-green-500 pl-6">
-              <Reveal tag="h2" :delay="200" class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 text-gray-900">
+              <Reveal
+                tag="h2"
+                :delay="200"
+                class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 text-gray-900"
+              >
                 Привет, мои дорогие!
               </Reveal>
 
-              <Reveal tag="p" :delay="350" class="text-gray-600 text-lg mb-8 leading-relaxed italic">
+              <Reveal
+                tag="p"
+                :delay="350"
+                class="text-gray-600 text-lg mb-8 leading-relaxed italic"
+              >
                 Я Наталья — руководитель студии маникюра «Красота на Крыльях 9369».
                 Хочу сказать вам пару слов от себя лично.
                 Моя главная цель — это безопасность и здоровье каждого, кто приходит к нам.

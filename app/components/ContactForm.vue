@@ -1,17 +1,26 @@
 <template>
   <section class="relative w-full py-16 lg:py-24 overflow-hidden">
     <div class="max-w-3xl mx-auto px-6 lg:px-12">
-
       <div class="text-center mb-12">
-        <Reveal tag="h2" class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 text-gray-900">
+        <Reveal
+          tag="h2"
+          class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 text-gray-900"
+        >
           Свяжитесь с нами
         </Reveal>
-        <Reveal tag="p" :delay="100" class="text-gray-600 text-lg max-w-2xl mx-auto">
+        <Reveal
+          tag="p"
+          :delay="100"
+          class="text-gray-600 text-lg max-w-2xl mx-auto"
+        >
           Оставьте заявку — мы перезвоним в течение 15 минут
         </Reveal>
       </div>
 
-      <form @submit.prevent="onSubmit" class="contact-form">
+      <form
+        class="contact-form"
+        @submit.prevent="onSubmit"
+      >
         <input
           v-model="form.website"
           type="text"
@@ -19,11 +28,17 @@
           tabindex="-1"
           autocomplete="off"
           class="hidden-field"
-        />
+        >
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Reveal :delay="200" class="field">
-            <label for="name" class="field__label">Ваше имя *</label>
+          <Reveal
+            :delay="200"
+            class="field"
+          >
+            <label
+              for="name"
+              class="field__label"
+            >Ваше имя *</label>
             <input
               id="name"
               v-model.trim="form.name"
@@ -31,11 +46,17 @@
               required
               placeholder="Как к вам обращаться"
               class="field__input"
-            />
+            >
           </Reveal>
 
-          <Reveal :delay="300" class="field">
-            <label for="phone" class="field__label">Телефон *</label>
+          <Reveal
+            :delay="300"
+            class="field"
+          >
+            <label
+              for="phone"
+              class="field__label"
+            >Телефон *</label>
             <input
               id="phone"
               v-model.trim="form.phone"
@@ -43,12 +64,18 @@
               required
               placeholder="+7 (___) ___-__-__"
               class="field__input"
-            />
+            >
           </Reveal>
         </div>
 
-        <Reveal :delay="400" class="field">
-          <label for="email" class="field__label">Email *</label>
+        <Reveal
+          :delay="400"
+          class="field"
+        >
+          <label
+            for="email"
+            class="field__label"
+          >Email *</label>
           <input
             id="email"
             v-model.trim="form.email"
@@ -56,23 +83,34 @@
             required
             placeholder="example@mail.ru"
             class="field__input"
-          />
+          >
         </Reveal>
 
-        <Reveal :delay="500" class="field">
-          <label for="message" class="field__label">Сообщение</label>
+        <Reveal
+          :delay="500"
+          class="field"
+        >
+          <label
+            for="message"
+            class="field__label"
+          >Сообщение</label>
           <textarea
             id="message"
             v-model.trim="form.message"
             rows="4"
             placeholder="Что вас интересует?"
             class="field__input field__input--textarea"
-          ></textarea>
+          />
         </Reveal>
 
         <Reveal :delay="600">
           <label class="checkbox">
-            <input type="checkbox" v-model="form.consent" required class="checkbox__input" />
+            <input
+              v-model="form.consent"
+              type="checkbox"
+              required
+              class="checkbox__input"
+            >
             <span class="checkbox__text">
               Я согласен(а) на обработку персональных данных
             </span>
@@ -91,19 +129,24 @@
           </UButton>
         </Reveal>
 
-        <Reveal v-if="success" :delay="0">
+        <Reveal
+          v-if="success"
+          :delay="0"
+        >
           <p class="contact-form__success">
             Спасибо! Мы получили вашу заявку и скоро свяжемся.
           </p>
         </Reveal>
 
-        <Reveal v-if="error" :delay="0">
+        <Reveal
+          v-if="error"
+          :delay="0"
+        >
           <p class="contact-form__error">
             {{ errorText }}
           </p>
         </Reveal>
       </form>
-
     </div>
   </section>
 </template>
@@ -117,7 +160,7 @@ const form = reactive({
   email: '',
   message: '',
   consent: false,
-  website: '',
+  website: ''
 })
 
 const sending = ref(false)
@@ -142,8 +185,8 @@ async function onSubmit() {
         name: form.name,
         phone: form.phone,
         email: form.email,
-        message: form.message,
-      },
+        message: form.message
+      }
     })
     success.value = true
     form.name = ''
@@ -153,10 +196,10 @@ async function onSubmit() {
     form.consent = false
   } catch (e) {
     error.value = true
-    errorText.value =
-      e?.data?.statusMessage ||
-      e?.statusMessage ||
-      'Не удалось отправить. Попробуйте ещё раз или позвоните нам.'
+    errorText.value
+      = e?.data?.statusMessage
+        || e?.statusMessage
+        || 'Не удалось отправить. Попробуйте ещё раз или позвоните нам.'
   } finally {
     sending.value = false
   }

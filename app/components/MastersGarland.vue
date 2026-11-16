@@ -1,24 +1,34 @@
 <template>
   <section class="relative w-full py-16 lg:py-24 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-
       <div class="text-center mb-16">
-        <Reveal tag="h2" class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 text-gray-900">
+        <Reveal
+          tag="h2"
+          class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 text-gray-900"
+        >
           Наши мастера
         </Reveal>
-        <Reveal tag="p" :delay="150" class="text-gray-600 text-lg max-w-2xl mx-auto">
+        <Reveal
+          tag="p"
+          :delay="150"
+          class="text-gray-600 text-lg max-w-2xl mx-auto"
+        >
           Люди, которые создают вашу красоту каждый день
         </Reveal>
       </div>
 
-      <Reveal :delay="250" y="40">
+      <Reveal
+        :delay="250"
+        y="40"
+      >
         <div class="polaroid-strip">
-
           <button
-            @click="prevSlide"
             class="polaroid-nav polaroid-nav--prev"
             aria-label="Предыдущий мастер"
-          >‹</button>
+            @click="prevSlide"
+          >
+            ‹
+          </button>
 
           <div class="polaroid-track">
             <div
@@ -28,7 +38,7 @@
               :class="{
                 'polaroid--active': i === currentSlide,
                 'polaroid--prev': i === prevIndex,
-                'polaroid--next': i === nextIndex,
+                'polaroid--next': i === nextIndex
               }"
               @click="currentSlide = i"
             >
@@ -36,11 +46,19 @@
                 src="/images/clothespin.png"
                 alt=""
                 class="polaroid__clip"
-              />
-              <img :src="master.photo" :alt="master.name" class="polaroid__photo" />
+              >
+              <img
+                :src="master.photo"
+                :alt="master.name"
+                class="polaroid__photo"
+              >
               <div class="polaroid__caption">
-                <h3 class="polaroid__name">{{ master.name }}</h3>
-                <p class="polaroid__role">{{ master.role }}</p>
+                <h3 class="polaroid__name">
+                  {{ master.name }}
+                </h3>
+                <p class="polaroid__role">
+                  {{ master.role }}
+                </p>
                 <UButton
                   :to="master.bookingUrl || 'https://n1163753.yclients.com/'"
                   target="_blank"
@@ -56,11 +74,12 @@
           </div>
 
           <button
-            @click="nextSlide"
             class="polaroid-nav polaroid-nav--next"
             aria-label="Следующий мастер"
-          >›</button>
-
+            @click="nextSlide"
+          >
+            ›
+          </button>
         </div>
       </Reveal>
 
@@ -69,14 +88,13 @@
           <button
             v-for="(m, i) in masters"
             :key="i"
-            @click="currentSlide = i"
             class="w-2.5 h-2.5 rounded-full transition"
             :class="currentSlide === i ? 'bg-green-600 scale-125' : 'bg-gray-300'"
             :aria-label="`Мастер ${i + 1}`"
+            @click="currentSlide = i"
           />
         </div>
       </Reveal>
-
     </div>
   </section>
 </template>
@@ -85,9 +103,9 @@
 import { ref, computed } from 'vue'
 
 const masters = ref([
-  { id: 1, name: 'Наталья', role: 'Руководитель студии, мастер маникюра', photo: '/images/natasha.png', bookingUrl: 'https://n1163753.yclients.com/', },
-  { id: 2, name: 'Анна', role: 'Мастер по ресницам', photo: '/images/natasha.png', bookingUrl: 'https://n1163753.yclients.com/', },
-  { id: 3, name: 'Мария', role: 'Бровист', photo: '/images/natasha.png', bookingUrl: 'https://n1163753.yclients.com/', },
+  { id: 1, name: 'Наталья', role: 'Руководитель студии, мастер маникюра', photo: '/images/natasha.png', bookingUrl: 'https://n1163753.yclients.com/' },
+  { id: 2, name: 'Анна', role: 'Мастер по ресницам', photo: '/images/natasha.png', bookingUrl: 'https://n1163753.yclients.com/' },
+  { id: 3, name: 'Мария', role: 'Бровист', photo: '/images/natasha.png', bookingUrl: 'https://n1163753.yclients.com/' }
 ])
 
 const currentSlide = ref(0)

@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   if (!name || !phone) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'Имя и телефон обязательны',
+      statusMessage: 'Имя и телефон обязательны'
     })
   }
 
@@ -16,7 +16,7 @@ export default defineEventHandler(async (event) => {
   if (!VK_TOKEN || !VK_USER_ID) {
     throw createError({
       statusCode: 500,
-      statusMessage: 'VK не настроен (TOKEN / USER_ID)',
+      statusMessage: 'VK не настроен (TOKEN / USER_ID)'
     })
   }
 
@@ -34,7 +34,7 @@ export default defineEventHandler(async (event) => {
     user_id: String(VK_USER_ID),
     message: text,
     random_id: String(randomId),
-    v: '5.199',
+    v: '5.199'
   })
 
   try {
@@ -47,7 +47,7 @@ export default defineEventHandler(async (event) => {
       console.error('VK API error:', response.error)
       throw createError({
         statusCode: 502,
-        statusMessage: `VK error: ${response.error.error_msg || 'unknown'}`,
+        statusMessage: `VK error: ${response.error.error_msg || 'unknown'}`
       })
     }
   } catch (e: any) {
@@ -55,7 +55,7 @@ export default defineEventHandler(async (event) => {
     console.error('VK send fail:', e?.message || e)
     throw createError({
       statusCode: 502,
-      statusMessage: 'Не удалось отправить заявку',
+      statusMessage: 'Не удалось отправить заявку'
     })
   }
 

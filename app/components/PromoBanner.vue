@@ -1,22 +1,40 @@
 <template>
-  <section id="promo" class="relative w-full py-16 lg:py-24 overflow-hidden">
+  <section
+    id="promo"
+    class="relative w-full py-16 lg:py-24 overflow-hidden"
+  >
     <div class="text-center mb-18">
-      <Reveal tag="h2" class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 text-gray-900">
+      <Reveal
+        tag="h2"
+        class="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight mb-4 text-gray-900"
+      >
         Подарок для новых гостей
       </Reveal>
-      <Reveal tag="p" :delay="150" class="text-gray-600 text-lg max-w-2xl mx-auto">
+      <Reveal
+        tag="p"
+        :delay="150"
+        class="text-gray-600 text-lg max-w-2xl mx-auto"
+      >
         Дарим 2000 ₽ на первое посещение — и заботимся о вашем комфорте на каждом этапе
       </Reveal>
     </div>
 
     <div class="max-w-4xl mx-auto px-6 lg:px-12">
-      <Reveal :delay="300" :y="40">
+      <Reveal
+        :delay="300"
+        :y="40"
+      >
         <div class="ticket">
-
           <div class="ticket__main">
-            <p class="ticket__label">Промокод на</p>
-            <p class="ticket__amount">2000 ₽</p>
-            <p class="ticket__hint">на первое посещение студии</p>
+            <p class="ticket__label">
+              Промокод на
+            </p>
+            <p class="ticket__amount">
+              2000 ₽
+            </p>
+            <p class="ticket__hint">
+              на первое посещение студии
+            </p>
 
             <div class="ticket__code">
               <span class="ticket__code-label">Ваш код</span>
@@ -25,11 +43,17 @@
           </div>
 
           <div class="ticket__perforation">
-            <span v-for="n in 12" :key="n" class="ticket__hole"></span>
+            <span
+              v-for="n in 12"
+              :key="n"
+              class="ticket__hole"
+            />
           </div>
 
           <div class="ticket__stub">
-            <p class="ticket__stub-text">Запишись сейчас</p>
+            <p class="ticket__stub-text">
+              Запишись сейчас
+            </p>
             <UButton
               to="https://n1163753.yclients.com/"
               target="_blank"
@@ -39,9 +63,10 @@
             >
               Онлайн-запись
             </UButton>
-            <p class="ticket__stub-small">Срок действия — 30 дней</p>
+            <p class="ticket__stub-small">
+              Срок действия — 30 дней
+            </p>
           </div>
-
         </div>
       </Reveal>
     </div>
@@ -190,7 +215,7 @@
   font-family: 'Georgia', serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #5b2c0d;   
+  color: #5b2c0d;
 }
 
 .ticket__stub-small {

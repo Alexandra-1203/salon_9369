@@ -1,4 +1,4 @@
-import type { StringLiteral } from "typescript"
+import type { StringLiteral } from 'typescript'
 
 export interface ServiceItem {
   name: string
@@ -10,9 +10,9 @@ export interface ServiceItem {
 }
 
 export interface Tier {
-  id: string        
-  label: string     
-  hint?: string     
+  id: string
+  label: string
+  hint?: string
 }
 
 export interface Service {
@@ -43,16 +43,16 @@ export const services: Service[] = [
       { name: 'Детский маникюр + обычный лак (до 12-ти лет)', duration: '1 ч', prices: { master: '1 200 ₽', top: '1 500 ₽', premium: '1 800 ₽' } },
       { name: 'Комбинированный маникюр без покрытия', duration: '1 ч', prices: { master: '1 300 ₽', top: '1 600 ₽', premium: '1 900 ₽' } },
       { name: 'Мужской маникюр', duration: '1 час', prices: { master: '1 500 ₽', top: '1 800 ₽', premium: '2 100 ₽' } },
-      { name: 'Снятие + комбинированный маникюр + обычный лак', duration: '1 ч 30 мин', prices: { master: '2 300 ₽', top: '2 600 ₽', premium: '3 100 ₽'} },
+      { name: 'Снятие + комбинированный маникюр + обычный лак', duration: '1 ч 30 мин', prices: { master: '2 300 ₽', top: '2 600 ₽', premium: '3 100 ₽' } },
       { name: 'Японский маникюр', duration: '1 ч', prices: { master: '1 950 ₽', top: '2 400 ₽', premium: '2 800 ₽' } },
       { name: 'Пилочный маникюр без покрытия', duration: '1 ч 30 мин', prices: { master: '1 800 ₽', top: '2 100 ₽', premium: '2 520 ₽' } },
-      { name: 'Пилочный маникюр + японская полировка', duration: '1 ч 30 мин', prices: { master: '2 300 ₽', top: '2 700 ₽'} },
+      { name: 'Пилочный маникюр + японская полировка', duration: '1 ч 30 мин', prices: { master: '2 300 ₽', top: '2 700 ₽' } },
       { name: 'Пилочный маникюр + покрытие обычный лак', duration: '2 ч 30', prices: { master: '2 600 ₽' } },
       { name: 'Снятие наращенных ногтей', duration: '40 мин', prices: { master: '600 ₽', top: '700 ₽', premium: '800 ₽' } },
       { name: 'Укрепление ногтей (гелем/полигелем)', duration: '30 мин', prices: { master: '600 ₽', top: '700 ₽', premium: '800 ₽' } },
       { name: 'Френч/втирка/омбре', duration: '30 мин', prices: { master: '500 ₽', top: '600 ₽', premium: '700 ₽' } },
-      { name: 'Снятие + комбинированный маникюр + гель', duration: '1ч 30 мин', prices: { master: '2 800 ₽', top: '3 300 ₽', premium: '3 900 ₽' } },
-    ],
+      { name: 'Снятие + комбинированный маникюр + гель', duration: '1ч 30 мин', prices: { master: '2 800 ₽', top: '3 300 ₽', premium: '3 900 ₽' } }
+    ]
   },
   {
     slug: 'lashes-extension',
@@ -77,8 +77,8 @@ export const services: Service[] = [
       { name: 'Снятие нарощенных ресниц', duration: '1 ч 30 мин', prices: { master: '600 ₽', top: '700 ₽' } },
       { name: 'Экспресс наращивание', duration: '1 ч 30 мин', prices: { master: '2 400 ₽', top: '2 900 ₽' } },
       { name: 'Стрелки', duration: '1 ч', prices: { master: '2 200 ₽', top: '2 700 ₽' } },
-      { name:  'Мокрый эффект', duration: '30 мин', prices: { master: '500 ₽', top: '3 100 ₽' } },
-    ],
+      { name: 'Мокрый эффект', duration: '30 мин', prices: { master: '500 ₽', top: '3 100 ₽' } }
+    ]
   },
   {
     slug: 'brows',
@@ -99,7 +99,7 @@ export const services: Service[] = [
       { name: 'Пррореживание бровей', duration: '15 мин', prices: { master: '450 ₽', top: '560 ₽' } },
       { name: 'Осветление бровей', duration: '30 мин', prices: { master: '1 100 ₽', top: '1 300 ₽' } },
       { name: 'Осветление + архитектура + окрашивание бровей краской', duration: '1 ч 15 мин', prices: { master: '2 600 ₽', top: '3 100 ₽' } }
-    ],
+    ]
   },
   {
     slug: 'pedicure',
@@ -118,8 +118,8 @@ export const services: Service[] = [
       { name: 'Фруктово-ферментативный педикюр без покрытия', duration: '1 ч', prices: { top: '4 300 ₽', premium: '5 000 ₽' } },
       { name: 'Фруктово-ферментативный педикюр + гель лак', duration: '2 ч', prices: { top: '5 300 ₽', premium: '6 000 ₽' } },
       { name: 'Фруктово-ферментативный педикюр + обычный лак', duration: '2 ч', prices: { top: '4 800 ₽', premium: '5 500 ₽' } },
-      { name: 'Обработка только пяточек', duration: '30 мин', prices: { premium: '2 500 ₽' } },
-    ],
+      { name: 'Обработка только пяточек', duration: '30 мин', prices: { premium: '2 500 ₽' } }
+    ]
   },
   {
     slug: 'organic-brow',
@@ -133,8 +133,8 @@ export const services: Service[] = [
       { name: 'Organic Brows (без архитектуры и окрашивания)', duration: '30 мин', prices: { master: '2 100 ₽' } },
       { name: 'Архитектура/окрашивание + Organic Brows', duration: '1 ч', prices: { master: '2 500 ₽' } },
       { name: 'Комплекс Organic Brow (без окрашивания)', duration: '1 ч', prices: { master: '2 000 ₽' } },
-      { name: 'Organic Brow + окрашивание ресниц', duration: '1 ч 30 мин', prices: { master: '2 900 ₽' } },
-    ],
+      { name: 'Organic Brow + окрашивание ресниц', duration: '1 ч 30 мин', prices: { master: '2 900 ₽' } }
+    ]
   },
   {
     slug: 'lashes-lamin',
@@ -147,8 +147,8 @@ export const services: Service[] = [
       { name: 'Ламинирование + окрашивание ресниц', duration: '1 ч', prices: { master: '2 600 ₽', top: '3 100 ₽' } },
       { name: 'Ламинирование ресниц', duration: '1 ч', prices: { master: '1 700 ₽', top: '2 200 ₽' } },
       { name: 'Ламинирование нижних ресниц', duration: '10 мин', prices: { master: '400 ₽', top: '500 ₽' } },
-      { name: 'Снятие нарощенных ресниц', duration: '30 мин', prices: { master: '500 ₽', top: '600 ₽' } },
-    ],
+      { name: 'Снятие нарощенных ресниц', duration: '30 мин', prices: { master: '500 ₽', top: '600 ₽' } }
+    ]
   },
   {
     slug: 'depil',
@@ -158,14 +158,14 @@ export const services: Service[] = [
     tiers: [TIER_MASTER, TIER_TOP],
     items: [
       { name: 'Депиляция "Сладкий арбузик" (зона над губой, щек/бакендбарды/подбородок, внутри носа)', duration: '30 мин', prices: { master: '1 050 ₽', top: '1 300 ₽' } },
-      { name: 'Комплекс "Все включено (зона над губой, щек, бакендбарды, подбородок, внутри носа)"', duration: '1 ч', prices: { master: '1 700 ₽', top: '2 100 ₽'  } },
-      { name: 'Комплекс "Сладккая вишня" (зона над губой, щек, бакендбарды/подбородок, внутри носа)', duration: '1 ч', prices: { master: '1 350 ₽', top: '1700 ₽'  } },
-      { name: 'Депиляция "Внутри носа"', duration: '20 мин', prices: { master: '350 ₽', top: '450  ₽'  } },
-      { name: 'Зона бакенбард', duration: '30 мин', prices: { master: '500 ₽', top: '600 ₽'  } },
-      { name: 'Зона губы', duration: '20 мин', prices: { master: '350 ₽', top: '450 ₽'  } },
-      { name: 'Зона подборотка', duration: '30 мин', prices: { master: '500 ₽', top: '600 ₽'  } },
-      { name: 'Зона щек', duration: '30 мин', prices: { master: '500 ₽', top: '600 ₽'  } },
-    ],
+      { name: 'Комплекс "Все включено (зона над губой, щек, бакендбарды, подбородок, внутри носа)"', duration: '1 ч', prices: { master: '1 700 ₽', top: '2 100 ₽' } },
+      { name: 'Комплекс "Сладккая вишня" (зона над губой, щек, бакендбарды/подбородок, внутри носа)', duration: '1 ч', prices: { master: '1 350 ₽', top: '1700 ₽' } },
+      { name: 'Депиляция "Внутри носа"', duration: '20 мин', prices: { master: '350 ₽', top: '450  ₽' } },
+      { name: 'Зона бакенбард', duration: '30 мин', prices: { master: '500 ₽', top: '600 ₽' } },
+      { name: 'Зона губы', duration: '20 мин', prices: { master: '350 ₽', top: '450 ₽' } },
+      { name: 'Зона подборотка', duration: '30 мин', prices: { master: '500 ₽', top: '600 ₽' } },
+      { name: 'Зона щек', duration: '30 мин', prices: { master: '500 ₽', top: '600 ₽' } }
+    ]
   },
   {
     slug: 'combo',
@@ -175,14 +175,14 @@ export const services: Service[] = [
     wide: true,
     tiers: [TIER_MASTER, TIER_TOP, TIER_PREMIUM],
     items: [
-      { name: 'КОМБО: Ламинирование ресниц и бровей', duration: '2 ч 15 мин', prices: { master: '4 420 ₽' },  savings: 'Экономия 15%' },
-      { name: 'КОМБО: Снятие + маникюр + педикю + гель лак', duration: '4 ч', prices: { premium: '7 520 ₽' },  savings: 'Экономия 6%' },
-      { name: 'КОМБО: Снятие + маникюр + гель лак + наращивание ресниц 2D', duration: '4 ч', prices: { top: '6 570 ₽', premium: '6 570 ₽' },  savings: 'Экономия 10%' },
-      { name: 'КОМБО: Архитектура + окрашивание бровей + депиляция губы', duration: '1 ч 20 мин', prices: { master: '1 848 ₽' },  savings: 'Экономия 12%' }
-    ],
-  },
+      { name: 'КОМБО: Ламинирование ресниц и бровей', duration: '2 ч 15 мин', prices: { master: '4 420 ₽' }, savings: 'Экономия 15%' },
+      { name: 'КОМБО: Снятие + маникюр + педикю + гель лак', duration: '4 ч', prices: { premium: '7 520 ₽' }, savings: 'Экономия 6%' },
+      { name: 'КОМБО: Снятие + маникюр + гель лак + наращивание ресниц 2D', duration: '4 ч', prices: { top: '6 570 ₽', premium: '6 570 ₽' }, savings: 'Экономия 10%' },
+      { name: 'КОМБО: Архитектура + окрашивание бровей + депиляция губы', duration: '1 ч 20 мин', prices: { master: '1 848 ₽' }, savings: 'Экономия 12%' }
+    ]
+  }
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
-  return services.find((s) => s.slug === slug)
+  return services.find(s => s.slug === slug)
 }

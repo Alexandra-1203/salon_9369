@@ -1,5 +1,9 @@
 <template>
-  <component :is="tag" ref="el" :style="style">
+  <component
+    :is="tag"
+    ref="el"
+    :style="style"
+  >
     <slot />
   </component>
 </template>
@@ -8,9 +12,9 @@
 import { ref, computed, onMounted } from 'vue'
 
 const props = defineProps({
-  delay: { type: Number, default: 0 },   // задержка в мс
-  y: { type: Number, default: 24 },      // сдвиг по вертикали в px
-  tag: { type: String, default: 'div' }, // какой тег рендерить
+  delay: { type: Number, default: 0 }, // задержка в мс
+  y: { type: Number, default: 24 }, // сдвиг по вертикали в px
+  tag: { type: String, default: 'div' } // какой тег рендерить
 })
 
 const el = ref(null)
@@ -20,7 +24,7 @@ const style = computed(() => ({
   opacity: visible.value ? 1 : 0,
   transform: visible.value ? 'translateY(0)' : `translateY(${props.y}px)`,
   transition: `opacity 0.7s ease ${props.delay}ms, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) ${props.delay}ms`,
-  willChange: visible.value ? 'auto' : 'opacity, transform',
+  willChange: visible.value ? 'auto' : 'opacity, transform'
 }))
 
 onMounted(() => {

@@ -1,5 +1,5 @@
 <template>
-  <div class="line-of-blocks"></div>
+  <div class="line-of-blocks" />
 </template>
 
 <style scoped>

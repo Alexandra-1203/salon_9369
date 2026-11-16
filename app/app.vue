@@ -27,9 +27,15 @@ useSeoMeta({
 <template>
   <div class="bg-green-50 text-amber-900">
     <UApp>
-      <UHeader :toggle="false" class="bg-gradient-to-r from-green-800/50 via-green-300/30 to-transparent border-b-0 shadow-none p-0">
-         <template #left>
-          <NuxtLink to="/" class="text-2xl font-light text-amber-900 hover:text-amber-700 font-heading tracking-wide">
+      <UHeader
+        :toggle="false"
+        class="bg-gradient-to-r from-green-800/50 via-green-300/30 to-transparent border-b-0 shadow-none p-0"
+      >
+        <template #left>
+          <NuxtLink
+            to="/"
+            class="text-2xl font-light text-amber-900 hover:text-amber-700 font-heading tracking-wide"
+          >
             Красота на Крыльях
           </NuxtLink>
         </template>
@@ -42,8 +48,6 @@ useSeoMeta({
       <UMain>
         <NuxtPage />
       </UMain>
-
-      
     </UApp>
   </div>
 </template>

@@ -1,11 +1,16 @@
 <template>
   <section class="relative w-full py-16 lg:py-24 overflow-hidden">
     <div class="max-w-5xl mx-auto px-6 lg:px-12">
-
       <nav class="mb-8 text-sm text-gray-500">
-        <NuxtLink to="/" class="hover:text-green-600">Главная</NuxtLink>
+        <NuxtLink
+          to="/"
+          class="hover:text-green-600"
+        >Главная</NuxtLink>
         <span class="mx-2">/</span>
-        <NuxtLink to="/#services" class="hover:text-green-600">Услуги</NuxtLink>
+        <NuxtLink
+          to="/#services"
+          class="hover:text-green-600"
+        >Услуги</NuxtLink>
         <span class="mx-2">/</span>
         <span class="text-gray-900">{{ service.title }}</span>
       </nav>
@@ -18,19 +23,26 @@
       </p>
 
       <div class="rounded-3xl overflow-hidden shadow-2xl mb-12 h-[300px] md:h-[420px]">
-        <img :src="service.image" :alt="service.title" class="w-full h-full object-cover" />
+        <img
+          :src="service.image"
+          :alt="service.title"
+          class="w-full h-full object-cover"
+        >
       </div>
 
-      <div v-if="service.tiers && service.tiers.length" class="flex justify-center mb-8">
+      <div
+        v-if="service.tiers && service.tiers.length"
+        class="flex justify-center mb-8"
+      >
         <div class="inline-flex bg-gray-100 rounded-full p-1 flex-wrap">
           <button
             v-for="tier in service.tiers"
             :key="tier.id"
-            @click="activeTier = tier.id"
             class="px-5 md:px-6 py-3 rounded-full text-sm md:text-base font-medium transition flex items-center gap-2"
             :class="activeTier === tier.id
               ? 'bg-white text-amber-900 shadow'
               : 'text-gray-500 hover:text-gray-800'"
+            @click="activeTier = tier.id"
           >
             {{ tier.label }}
             <span
@@ -45,14 +57,26 @@
 
       <h2 class="font-heading text-2xl md:text-3xl mb-6 text-gray-900">
         Услуги и цены
-        <span v-if="activeTierData" class="text-base font-normal text-gray-500 ml-2">
+        <span
+          v-if="activeTierData"
+          class="text-base font-normal text-gray-500 ml-2"
+        >
           — {{ activeTierData.label }}
         </span>
       </h2>
 
-      <transition name="fade" mode="out-in">
-        <ul :key="activeTier" class="flex flex-col gap-3 mb-12">
-          <template v-for="item in service.items" :key="item.name">
+      <transition
+        name="fade"
+        mode="out-in"
+      >
+        <ul
+          :key="activeTier"
+          class="flex flex-col gap-3 mb-12"
+        >
+          <template
+            v-for="item in service.items"
+            :key="item.name"
+          >
             <li
               v-if="getPrice(item) !== null"
               class="flex items-center justify-between gap-4 p-4 md:p-5 rounded-2xl bg-gray-50 hover:bg-gray-100 transition"
@@ -66,7 +90,10 @@
                 >
                   {{ item.savings }}
                 </span>
-                <span v-if="getDuration(item)" class="text-sm text-gray-500">
+                <span
+                  v-if="getDuration(item)"
+                  class="text-sm text-gray-500"
+                >
                   {{ getDuration(item) }}
                 </span>
               </div>
@@ -99,7 +126,6 @@
           Все услуги
         </UButton>
       </div>
-
     </div>
   </section>
 </template>
@@ -118,12 +144,12 @@ if (!service) {
 const activeTier = ref<string>(service.tiers?.[0]?.id || '')
 
 const activeTierData = computed(() =>
-  service.tiers?.find((t) => t.id === activeTier.value) || null
+  service.tiers?.find(t => t.id === activeTier.value) || null
 )
 
 function getPrice(item: any) {
   if (item.prices && activeTier.value) {
-    return item.prices[activeTier.value] ?? null  
+    return item.prices[activeTier.value] ?? null
   }
   return item.price ?? null
 }
@@ -137,7 +163,7 @@ function getDuration(item: any) {
 
 useHead({
   title: `${service.title} — Красота на Крыльях 9369`,
-  meta: [{ name: 'description', content: service.description }],
+  meta: [{ name: 'description', content: service.description }]
 })
 </script>
 

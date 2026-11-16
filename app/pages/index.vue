@@ -23,7 +23,7 @@
       :duration="50"
       :slides="cosmeticsSlides"
     />
-     <FilmStrip
+    <FilmStrip
       title="Украшения"
       subtitle="Авторские изделия ручной работы — можно приобрести в студии"
       theme="pink"
@@ -58,7 +58,7 @@ const interiorSlides = [
   { type: 'image', src: '/images/interior.jpg' },
   { type: 'image', src: '/images/interior2.jpg' },
   { type: 'image', src: '/images/interior5.jpg' },
-  { type: 'image', src: '/images/interior6.jpg' },
+  { type: 'image', src: '/images/interior6.jpg' }
 ]
 
 const cosmeticsSlides = [
@@ -66,7 +66,7 @@ const cosmeticsSlides = [
   { type: 'image', src: '/images/cosmetics2.jpg' },
   { type: 'image', src: '/images/cosmetics3.jpg' },
   { type: 'image', src: '/images/cosmetics4.jpg' },
-  { type: 'video', src: '/video/cosmetics4.mp4' },
+  { type: 'video', src: '/video/cosmetics4.mp4' }
 ]
 
 const jewelrySlides = [
@@ -76,6 +76,6 @@ const jewelrySlides = [
   { type: 'image', src: '/images/necklace5.jpg' },
   { type: 'image', src: '/images/necklace2.jpg' },
   { type: 'image', src: '/images/necklace6.jpg' },
-  { type: 'image', src: '/images/necklace7.jpg' },
+  { type: 'image', src: '/images/necklace7.jpg' }
 ]
 </script>

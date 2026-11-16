@@ -57,7 +57,7 @@
 }
 
 [role="menuitem"]:hover {
-  color: #78350f !important;             
+  color: #78350f !important;
   background-color: rgba(220, 252, 231, 0.6) !important;
 }
 
