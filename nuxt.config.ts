@@ -22,6 +22,10 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2026-06-30',
 
+  nitro: {
+    preset: 'netlify'
+  },
+
   eslint: {
     config: {
       stylistic: {
