@@ -34,7 +34,8 @@ export default defineNuxtConfig({
   fonts: {
     providers: {
       fontshare: false,
-      fontsource: false
+      fontsource: false,
+      google: false
     }
   },
 

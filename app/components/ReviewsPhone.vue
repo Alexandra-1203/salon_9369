@@ -28,6 +28,8 @@
           <img
             src="/images/phoneee.png"
             alt="Смартфон"
+            loading="lazy"
+            decoding="async"
             class="relative z-10 w-[280px] md:w-[400px] h-auto drop-shadow-2xl"
           >
 
@@ -40,6 +42,8 @@
                 :key="currentReview.photo"
                 :src="currentReview.photo"
                 :alt="currentReview.name"
+                loading="lazy"
+                decoding="async"
                 class="w-[170px] h-[340px] md:w-[226px] md:h-[482px] object-cover rounded-[2rem] border-4 border-white/50 shadow-xl translate-x-[4px] translate-y-[40px] md:translate-x-[4px] md:translate-y-[47px]"
               >
             </transition>

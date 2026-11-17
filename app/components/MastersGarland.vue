@@ -44,12 +44,16 @@
             >
               <img
                 src="/images/clothespin.png"
-                alt=""
+                alt="скрепка"
+                loading="lazy"
+                decoding="async"
                 class="polaroid__clip"
               >
               <img
                 :src="master.photo"
                 :alt="master.name"
+                loading="lazy"
+                decoding="async"
                 class="polaroid__photo"
               >
               <div class="polaroid__caption">

@@ -4,6 +4,8 @@
       <img
         src="/images/women.png"
         alt="Салон красоты"
+        loading="lazy"
+        decoding="async"
         class="w-full h-full object-contain object-right-bottom"
       >
       <div class="absolute inset-0 bg-gradient-to-r from-green-800/50 via-green-300/30 to-transparent" />

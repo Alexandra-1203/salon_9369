@@ -9,6 +9,8 @@
           <img
             src="/images/star.png"
             alt="Маникюр без боли"
+            loading="lazy"
+            decoding="async"
             class="w-16 h-16 md:w-20 md:h-20 mb-4 object-contain"
           >
           <p class="text-gray-700 text-base md:text-lg leading-snug">
@@ -23,6 +25,8 @@
           <img
             src="/images/heart.png"
             alt="Гарантия"
+            loading="lazy"
+            decoding="async"
             class="w-16 h-16 md:w-20 md:h-20 mb-4 object-contain"
           >
           <p class="text-gray-700 text-base md:text-lg leading-snug">
@@ -37,6 +41,8 @@
           <img
             src="/images/geo.png"
             alt="Адрес"
+            loading="lazy"
+            decoding="async"
             class="w-16 h-16 md:w-20 md:h-20 mb-4 object-contain"
           >
           <p class="text-gray-700 text-base md:text-lg leading-snug">

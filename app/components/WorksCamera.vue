@@ -28,6 +28,8 @@
               <img
                 src="/images/fotik.png"
                 alt="Фотоаппарат"
+                loading="lazy"
+                decoding="async"
                 class="camera-body"
               >
 
@@ -63,6 +65,8 @@
                       :src="slides[currentSlide].src"
                       :alt="slides[currentSlide].alt || 'Работа'"
                       class="camera-video"
+                      loading="lazy"
+                      decoding="async"
                     >
                   </div>
                 </transition>
@@ -194,6 +198,8 @@
               :src="slides[currentSlide].src"
               :alt="slides[currentSlide].alt || 'Работа'"
               class="lightbox__media"
+              loading="lazy"
+              decoding="async"
             >
           </div>
 

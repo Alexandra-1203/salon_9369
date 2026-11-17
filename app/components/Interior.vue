@@ -36,6 +36,8 @@
           <img
             :src="img"
             alt="Кадр"
+            loading="lazy"
+            decoding="async"
             class="film__photo"
             draggable="false"
           >

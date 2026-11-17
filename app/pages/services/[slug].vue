@@ -27,6 +27,8 @@
           :src="service.image"
           :alt="service.title"
           class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
         >
       </div>
 

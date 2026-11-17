@@ -64,6 +64,7 @@
               required
               placeholder="+7 (___) ___-__-__"
               class="field__input"
+              @input="formatPhone"
             >
           </Reveal>
         </div>
@@ -104,17 +105,11 @@
         </Reveal>
 
         <Reveal :delay="600">
-          <label class="checkbox">
-            <input
-              v-model="form.consent"
-              type="checkbox"
-              required
-              class="checkbox__input"
-            >
-            <span class="checkbox__text">
-              Я согласен(а) на обработку персональных данных
-            </span>
-          </label>
+          <UCheckbox
+            v-model="form.consent"
+            label="Я согласен(а) на обработку персональных данных"
+            required
+          />
         </Reveal>
 
         <Reveal :delay="700">
@@ -203,6 +198,35 @@ async function onSubmit() {
   } finally {
     sending.value = false
   }
+}
+
+const formatPhone = (e) => {
+  let input = e.target.value.replace(/\D/g, '')
+
+  if (input.length === 0) {
+    form.phone = ''
+    return
+  }
+
+  if (input[0] === '7' || input[0] === '8') {
+    input = input.substring(1)
+  }
+
+  let formatted = '+7 '
+  if (input.length > 0) {
+    formatted += `(${input.substring(0, 3)}`
+  }
+  if (input.length >= 3) {
+    formatted += `) ${input.substring(3, 6)}`
+  }
+  if (input.length > 6) {
+    formatted += `-${input.substring(6, 8)}`
+  }
+  if (input.length > 8) {
+    formatted += `-${input.substring(8, 10)}`
+  }
+
+  form.phone = formatted
 }
 </script>
 

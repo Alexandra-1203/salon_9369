@@ -58,6 +58,8 @@
               v-else
               :src="item.src || item"
               :alt="title"
+              loading="lazy"
+              decoding="async"
               class="film__photo"
               draggable="false"
             >
