@@ -12,9 +12,9 @@
 import { ref, computed, onMounted } from 'vue'
 
 const props = defineProps({
-  delay: { type: Number, default: 0 }, // задержка в мс
-  y: { type: Number, default: 24 }, // сдвиг по вертикали в px
-  tag: { type: String, default: 'div' } // какой тег рендерить
+  delay: { type: Number, default: 0 },
+  y: { type: Number, default: 24 }, 
+  tag: { type: String, default: 'div' }
 })
 
 const el = ref(null)
@@ -30,7 +30,6 @@ const style = computed(() => ({
 onMounted(() => {
   if (!el.value) return
 
-  // Если элемент уже виден при загрузке — показываем сразу
   const rect = el.value.getBoundingClientRect()
   if (rect.top < window.innerHeight && rect.bottom > 0) {
     requestAnimationFrame(() => { visible.value = true })
