@@ -13,7 +13,7 @@ import { ref, computed, onMounted } from 'vue'
 
 const props = defineProps({
   delay: { type: Number, default: 0 },
-  y: { type: Number, default: 24 }, 
+  y: { type: Number, default: 24 },
   tag: { type: String, default: 'div' }
 })
 
