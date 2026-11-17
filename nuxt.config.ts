@@ -22,10 +22,6 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2026-06-30',
 
-  nitro: {
-    preset: 'netlify'
-  },
-
   eslint: {
     config: {
       stylistic: {
@@ -40,5 +36,11 @@ export default defineNuxtConfig({
       fontshare: false,
       fontsource: false
     }
+  },
+
+  icon: {
+    mode: 'svg',
+    serverBundle: 'local'
   }
+
 })
