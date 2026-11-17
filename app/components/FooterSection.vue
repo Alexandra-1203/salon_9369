@@ -167,7 +167,7 @@
             © {{ new Date().getFullYear() }} Студия красоты «Красота на Крыльях 9369»
           </p>
           <NuxtLink
-            to="/privacy"
+            to="#"
             class="footer__link footer__link--small"
           >
             Политика конфиденциальности
@@ -221,7 +221,6 @@
   color: #92400e;
 }
 
-/* ─── Соцсети ─── */
 .footer__socials {
   display: flex;
   gap: 12px;
