@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
   })
 
   try {
-    const response: any = await $fetch(
+    const response = await $fetch<{ error?: { error_msg: string } }>(
       `https://api.vk.com/method/messages.send?${params.toString()}`,
       { method: 'POST' }
     )
@@ -50,9 +50,9 @@ export default defineEventHandler(async (event) => {
         statusMessage: `VK error: ${response.error.error_msg || 'unknown'}`
       })
     }
-  } catch (e: any) {
-    if (e?.statusCode) throw e
-    console.error('VK send fail:', e?.message || e)
+  } catch (e: unknown) {
+    if (e && typeof e === 'object' && 'statusCode' in e) throw e
+    console.error('VK send fail:', e instanceof Error ? e.message : e)
     throw createError({
       statusCode: 502,
       statusMessage: 'Не удалось отправить заявку'
