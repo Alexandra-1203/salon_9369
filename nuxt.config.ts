@@ -10,6 +10,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  ui: {
+    colorMode: false
+  },
+
   runtimeConfig: {
     vkCommunityToken: '',
     vkUserId: '',

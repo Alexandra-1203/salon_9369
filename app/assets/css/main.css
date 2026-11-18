@@ -78,3 +78,18 @@ html {
 section[id] {
   scroll-margin-top: 100px;
 }
+
+:root {
+  --ui-primary: #3A6636; 
+  --ui-text: #78350f;   
+  --ui-bg: #F2F7F0;      
+  --ui-border: #e8d0d6;
+  --ui-border-muted: #e8d0d6;
+  --ui-border-accented: #e8d0d6;
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--ui-bg);
+  color: var(--ui-text);
+}

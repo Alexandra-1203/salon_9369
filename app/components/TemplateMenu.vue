@@ -32,14 +32,16 @@
       to: 'https://n1163753.yclients.com/',
       target: '_blank'
     }]"
-    :content="{ align: 'start' }"
+    :content="{ align: 'start',
+                side: 'bottom',
+                sideOffset: 12 }"
     :ui="{
       content: 'min-w-[320px] p-2 bg-gradient-to-r from-green-900/70 via-green-700/60 to-green-600/50 shadow-xl',
       item: 'py-4 px-6 rounded-xl transition-colors',
       label: 'text-2xl font-semibold',
       separator: 'my-2 border-amber-900/15 border-t'
     }"
-    size="xs"
+    size="md"
   >
     <UButton
       icon="i-lucide-menu"

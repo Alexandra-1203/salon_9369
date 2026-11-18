@@ -4,7 +4,6 @@
       <img
         src="/images/women.png"
         alt="Салон красоты"
-        loading="lazy"
         decoding="async"
         class="w-full h-full object-contain object-right-bottom"
       >
